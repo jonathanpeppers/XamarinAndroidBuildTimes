@@ -27,6 +27,17 @@ The following logs are recorded so far:
 
 *NOTE: NuGet restore is not included in timing*
 
+# Results
+
+## Windows
+
+| Project        | Clean Build | Second Build | Touch C# File | Touch Resource File |
+| ---            | ---:        | ---:         | ---:          | ---:                |
+| FormsBuildTime | 39.612s     | 3.685s       | 4.681s        | 12.467s             |
+| Evolve 2016    | 1m 03.673s  | 30.773s      | 29.589s       | 41.899s             |
+
+*NOTE: this was with VS 2017 15.6.4, Intel 2.8ghz Core i7*
+
 # Adding new projects
 
 1. Setup a new project as a git submodule
