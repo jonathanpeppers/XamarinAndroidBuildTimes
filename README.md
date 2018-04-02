@@ -40,6 +40,25 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 
 *NOTE: this was with VS 2017 15.6.4, Intel 2.8ghz Core i7*
 
+# Discoveries / Issues
+
+On the second build, for `Evolve2016`, `IncrementalClean` is deleting some proguard files:
+```
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\proguard\dc663e480.txt".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\dc663e48.proguard.stamp".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\proguard\0757626b0.txt".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\0757626b.proguard.stamp".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\proguard\2f4d086a0.txt".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\2f4d086a.proguard.stamp".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\proguard\ea5c07c40.txt".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\ea5c07c4.proguard.stamp".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\proguard\d286ae890.txt".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\d286ae89.proguard.stamp".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\proguard\1f973a1f0.txt".
+Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\1f973a1f.proguard.stamp".
+```
+I will follow up to see about fixing this.
+
 # Adding new projects
 
 1. Setup a new project as a git submodule
