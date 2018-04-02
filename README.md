@@ -29,6 +29,8 @@ The following logs are recorded so far:
 
 # Results
 
+See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildTimes/releases) for binary log files.
+
 ## Windows
 
 | Project        | Clean Build | Second Build | Touch C# File | Touch Resource File |
