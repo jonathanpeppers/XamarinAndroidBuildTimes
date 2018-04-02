@@ -48,19 +48,22 @@ Task("Build-Projects")
     {
         foreach (var project in projects)
         {
-            MSBuild(project.ProjectPath, new MSBuildSettings
-            {
-                BinaryLogger = new MSBuildBinaryLogSettings
-                {
-                    Enabled = true,
-                    FileName = project.LogFile,
-                }
-            }
-            .WithTarget("SignAndroidPackage"));
+            Build(project, "Clean");
         }
     });
 
+Task("Second-Build-Projects")
+    .IsDependentOn("Build-Projects")
+    .Does(() =>
+    {
+        foreach (var project in projects)
+        {
+            Build(project, "Second");
+        }
+    });
+
+
 Task("Default")
-    .IsDependentOn("Build-Projects");
+    .IsDependentOn("Second-Build-Projects");
 
 RunTarget(target);
