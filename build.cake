@@ -7,6 +7,10 @@ string configuration = Argument("configuration", "Release");
 // Add new projects here, after the git submodule is setup
 var projects = new[]
 {
+    Project("BlankApp",
+        csFile:       "./BlankApp/MainActivity.cs",
+        arFile:       "./BlankApp/Resources/layout/Main.xml",
+        description:  "File -> New Project -> Blank Android App"),
     Project("FormsBuildTime",
         csFile:       "./FormsBuildTime/FormsBuildTime.Android/MainActivity.cs",
         arFile:       "./FormsBuildTime/FormsBuildTime.Android/Resources/values/styles.xml",

@@ -16,6 +16,7 @@ It will perform the necessary build steps/git operations and place the resulting
 # Output
 
 The following projects are setup so far:
+- `BlankApp` - File -> New Blank Android App
 - `FormsBuildTime` - File -> New Master Detail Forms template
 - `Evolve2016` - James Montemagno's Evolve 2016 app
 
@@ -35,6 +36,7 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 
 | Project        | Clean Build | Second Build | Touch C# File | Touch Resource File |
 | ---            | ---:        | ---:         | ---:          | ---:                |
+| BlankApp       | 6.271s      | 1.618s       | 4.681s        | 1.769s              |
 | FormsBuildTime | 39.612s     | 3.685s       | 4.681s        | 12.126s             |
 | Evolve 2016    | 1m 03.673s  | 30.773s      | 29.589s       | 41.899s             |
 
@@ -44,6 +46,7 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 
 | Project        | Clean Build | Second Build | Touch C# File | Touch Resource File |
 | ---            | ---:        | ---:         | ---:          | ---:                |
+| BlankApp       | 8.222s      | 2.122s       | 3.601s        | 2.380s              |
 | FormsBuildTime | 34.196s     | 4.401s       | 6.542s        | 12.467s             |
 | Evolve 2016    | 1m 17.958s  | 38.887s      | 43.985s       | 53.107s             |
 

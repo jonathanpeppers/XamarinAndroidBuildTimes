@@ -293,4 +293,5 @@ __pycache__/
 .vs/
 *.userprefs
 *.user
+*.binlog
 Resource.designer.cs
