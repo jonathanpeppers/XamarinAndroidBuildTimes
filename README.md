@@ -22,6 +22,8 @@ The following projects are setup so far:
 The following logs are recorded so far:
 - `-Clean.binlog` - the clean build (after a `git clean -dxf` is performed)
 - `-Second.binlog` - the second build after the "clean" build
+- `-TouchCS.binlog` - modify a C# file and build after the "clean" build, adds `//comment` to `MainActivity.cs`
+- `-TouchAR.binlog` - modify an `AndroidResource` file and build after the "clean" build, adds `<!--comment-->` to `Resource/values/styles.xml`
 
 *NOTE: NuGet restore is not included in timing*
 
