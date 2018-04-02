@@ -21,6 +21,9 @@ Task ("Git-Clean")
         StartProcess("git", "submodule foreach git clean -dxf");
     });
 
+Task ("Clean-Output")
+    .Does(() => CleanDirectory ("./output/"));
+
 Task("NuGet-Restore")
     .Does(() =>
     {
@@ -31,6 +34,7 @@ Task("NuGet-Restore")
     });
 
 Task("Build-Projects")
+    .IsDependentOn("Clean-Output")
     .IsDependentOn("Git-Submodule")
     .IsDependentOn("Git-Clean")
     .IsDependentOn("NuGet-Restore")
@@ -38,7 +42,14 @@ Task("Build-Projects")
     {
         foreach (var project in projects)
         {
-            MSBuild(project.Path);
+            MSBuild(project.Path, new MSBuildSettings
+            {
+                BinaryLogger = new MSBuildBinaryLogSettings
+                {
+                    Enabled = true,
+                    FileName = project.LogFile,
+                }
+            });
         }
     });
 

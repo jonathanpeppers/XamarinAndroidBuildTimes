@@ -3,6 +3,7 @@ ProjectToBuild Project (string path, string projectOrSln = null, string descript
     return new ProjectToBuild
     {
         Path = Directory ($"./external/{path}") + File(projectOrSln ?? $"{path}.sln"),
+        LogFile = $"./output/{path}.binlog",
         Description = description ?? path,
     };
 }
@@ -10,6 +11,8 @@ ProjectToBuild Project (string path, string projectOrSln = null, string descript
 class ProjectToBuild
 {
     public string Description { get; set; }
+
+    public string LogFile { get; set; }
 
     public FilePath Path { get; set; }
 }
