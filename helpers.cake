@@ -1,11 +1,14 @@
-ProjectToBuild Project (string path, string projectOrSln = null, string description = null)
+ProjectToBuild Project (string path, string projectOrSln = null, string nugetRestore = null, string description = null)
 {
-    return new ProjectToBuild
+    var project = new ProjectToBuild
     {
-        Path = Directory ($"./external/{path}") + File(projectOrSln ?? $"{path}.sln"),
+        Directory = Directory($"./external/{path}/"),
         LogFile = $"./output/{path}.binlog",
         Description = description ?? path,
     };
+    project.ProjectPath = project.Directory.CombineWithFilePath(projectOrSln ?? $"./{path}.sln");
+    project.NuGetRestore = nugetRestore == null ? project.ProjectPath : project.Directory.CombineWithFilePath(nugetRestore);
+    return project;
 }
 
 class ProjectToBuild
@@ -14,5 +17,9 @@ class ProjectToBuild
 
     public string LogFile { get; set; }
 
-    public FilePath Path { get; set; }
+    public DirectoryPath Directory { get; set; }
+
+    public FilePath NuGetRestore { get; set; }
+
+    public FilePath ProjectPath { get; set; }
 }

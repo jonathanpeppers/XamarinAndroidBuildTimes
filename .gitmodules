@@ -1,3 +1,6 @@
 [submodule "external/FormsBuildTime"]
 	path = external/FormsBuildTime
 	url = https://github.com/jonathanpeppers/FormsBuildTime.git
+[submodule ".external/Evolve2016"]
+	path = external/Evolve2016
+	url = https://github.com/xamarinhq/app-conference.git

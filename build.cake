@@ -6,7 +6,12 @@ string configuration = Argument("configuration", "Release");
 
 var projects = new[]
 {
-    Project ("FormsBuildTime", description: "File -> New Project -> Forms Master Detail")
+    Project ("FormsBuildTime", 
+        description:  "File -> New Project -> Forms Master Detail"),
+    Project ("Evolve2016",
+        projectOrSln: "./src/Conference.Android/Conference.Android.csproj",
+        nugetRestore: "./src/Conference.sln",
+        description:  "Evolve 2016 Conference App")
 };
 
 Task ("Git-Submodule")
@@ -29,7 +34,8 @@ Task("NuGet-Restore")
     {
         foreach (var project in projects)
         {
-            NuGetRestore(project.Path);
+            Information($"nuget restore {project.NuGetRestore}");
+            NuGetRestore(project.NuGetRestore);
         }
     });
 
@@ -42,14 +48,15 @@ Task("Build-Projects")
     {
         foreach (var project in projects)
         {
-            MSBuild(project.Path, new MSBuildSettings
+            MSBuild(project.ProjectPath, new MSBuildSettings
             {
                 BinaryLogger = new MSBuildBinaryLogSettings
                 {
                     Enabled = true,
                     FileName = project.LogFile,
                 }
-            });
+            }
+            .WithTarget("SignAndroidPackage"));
         }
     });
 
