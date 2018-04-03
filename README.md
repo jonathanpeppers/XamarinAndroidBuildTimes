@@ -36,7 +36,7 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 
 | Project        | Clean Build | Second Build | Touch C# File | Touch Resource File |
 | ---            | ---:        | ---:         | ---:          | ---:                |
-| BlankApp       | 6.271s      | 1.618s       | 4.681s        | 1.769s              |
+| BlankApp       | 6.271s      | 1.618s       | 2.074s        | 1.769s              |
 | FormsBuildTime | 39.612s     | 3.685s       | 4.681s        | 12.126s             |
 | Evolve 2016    | 1m 03.673s  | 30.773s      | 29.589s       | 41.899s             |
 
