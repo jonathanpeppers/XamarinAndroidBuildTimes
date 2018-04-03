@@ -54,7 +54,7 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 
 # Discoveries / Issues
 
-## Xamarin.Android
+## Support Libraries / Components
 
 On the second build on Windows, for `Evolve2016`, `IncrementalClean` is deleting some proguard files:
 ```
@@ -71,6 +71,12 @@ Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\d28
 Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\proguard\1f973a1f0.txt".
 Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\1f973a1f.proguard.stamp".
 ```
+
+After further research, it appears to be coming from `Xamarin.Build.Download` [here](https://github.com/xamarin/XamarinComponents/blob/b398bf3265032e969a9d12ca3ae120b5c8d7c923/Util/Xamarin.Build.Download/source/Xamarin.Build.Download/Xamarin.Build.Download.targets#L132).
+
+The `_XamarinAndroidBuildAarProguardConfigs` target seems to be running every time.
+
+## Xamarin.Android
 
 On the second build on Mac, for `Evolve2016`, `IncrementalClean` is also deleting pdb/mdb files (in addition to proguard):
 ```
@@ -107,15 +113,14 @@ Deleting file "external/Evolve2016/src/Conference.Android/obj/Debug/linksrc/Xama
 Deleting file "external/Evolve2016/src/Conference.Android/bin/Debug/Mono.Android.pdb".
 ```
 
-### Also
-
-`_LinkAssembliesNoShrink` seems to run every time.
+Other issues:
+- `_LinkAssembliesNoShrink` seems to run every time.
 
 ## Xamarin.Forms
 
 `XamlC` target seems to run every time. Sent a [PR](https://github.com/xamarin/Xamarin.Forms/pull/2230).
 
-### I will follow up to see about fixing these in Xamarin.Android and Xamarin.Forms.
+### I will follow up to see about fixing these in Xamarin.Android, Components, and/or Xamarin.Forms.
 
 # Adding new projects
 
