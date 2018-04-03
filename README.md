@@ -76,6 +76,8 @@ After further research, it appears to be coming from `Xamarin.Build.Download` [h
 
 The `_XamarinAndroidBuildAarProguardConfigs` target seems to be running every time.
 
+Filed an issue [here](https://github.com/xamarin/XamarinComponents/issues/341).
+
 ## Xamarin.Android
 
 On the second build on Mac, for `Evolve2016`, `IncrementalClean` is also deleting pdb/mdb files (in addition to proguard):
