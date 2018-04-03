@@ -107,11 +107,15 @@ Deleting file "external/Evolve2016/src/Conference.Android/obj/Debug/linksrc/Xama
 Deleting file "external/Evolve2016/src/Conference.Android/bin/Debug/Mono.Android.pdb".
 ```
 
-I will follow up to see about fixing these.
+### Also
+
+`_LinkAssembliesNoShrink` seems to run every time.
 
 ## Xamarin.Forms
 
-`XamlC` task seems to run every time. Sent a [PR](https://github.com/xamarin/Xamarin.Forms/pull/2230).
+`XamlC` target seems to run every time. Sent a [PR](https://github.com/xamarin/Xamarin.Forms/pull/2230).
+
+### I will follow up to see about fixing these in Xamarin.Android and Xamarin.Forms.
 
 # Adding new projects
 
