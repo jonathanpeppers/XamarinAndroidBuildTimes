@@ -54,6 +54,8 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 
 # Discoveries / Issues
 
+## Xamarin.Android
+
 On the second build on Windows, for `Evolve2016`, `IncrementalClean` is deleting some proguard files:
 ```
 Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\proguard\dc663e480.txt".
@@ -106,6 +108,10 @@ Deleting file "external/Evolve2016/src/Conference.Android/bin/Debug/Mono.Android
 ```
 
 I will follow up to see about fixing these.
+
+## Xamarin.Forms
+
+`XamlC` task seems to run every time. Sent a [PR](https://github.com/xamarin/Xamarin.Forms/pull/2230).
 
 # Adding new projects
 
