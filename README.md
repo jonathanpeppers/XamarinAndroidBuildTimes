@@ -38,7 +38,7 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 | ---            | ---:        | ---:         | ---:          | ---:                |
 | BlankApp       | 6.271s      | 1.618s       | 2.074s        | 1.769s              |
 | FormsBuildTime | 39.612s     | 3.685s       | 4.681s        | 12.126s             |
-| Evolve 2016    | 1m 03.673s  | 30.773s      | 29.589s       | 41.899s             |
+| Evolve 2016    | 1m 0.335s   | 8.788s       | 11.248s       | 24.577s             |
 
 *NOTE: this was with VS 2017 15.6.4, Intel 2.8ghz Core i7*
 
@@ -48,7 +48,7 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 | ---            | ---:        | ---:         | ---:          | ---:                |
 | BlankApp       | 8.222s      | 2.122s       | 3.601s        | 2.380s              |
 | FormsBuildTime | 34.196s     | 4.401s       | 6.542s        | 12.467s             |
-| Evolve 2016    | 1m 17.958s  | 38.887s      | 43.985s       | 53.107s             |
+| Evolve 2016    | 1m 24.588s  | 16.218s      | 19.791s       | 36.206s             |
 
 *NOTE: this was with VS for Mac 7.4.1 (build 48), should be equivalent to 15.6.4, Intel 3.3ghz Core i7*
 
@@ -72,11 +72,9 @@ Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\pro
 Deleting file "external\Evolve2016\src\Conference.Android\obj\Debug\XbdMerge\1f973a1f.proguard.stamp".
 ```
 
-After further research, it appears to be coming from `Xamarin.Build.Download` [here](https://github.com/xamarin/XamarinComponents/blob/b398bf3265032e969a9d12ca3ae120b5c8d7c923/Util/Xamarin.Build.Download/source/Xamarin.Build.Download/Xamarin.Build.Download.targets#L132).
+After further research, it is fixed in Xamarin.Build.Download 0.4.9.
 
-The `_XamarinAndroidBuildAarProguardConfigs` target seems to be running every time.
-
-Filed an issue [here](https://github.com/xamarin/XamarinComponents/issues/341).
+I forked the Evolve 2016 app, updated the NuGet, and reran the numbers.
 
 ## Xamarin.Android
 
