@@ -7,3 +7,6 @@
 [submodule "external/BlankApp"]
 	path = external/BlankApp
 	url = https://github.com/jonathanpeppers/BlankApp.git
+[submodule "external/SH"]
+	path = external/SH
+	url = https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps.git
