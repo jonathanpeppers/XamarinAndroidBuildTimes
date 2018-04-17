@@ -20,7 +20,13 @@ var projects = new[]
         arFile:       "./src/Conference.Android/Resources/values/styles.xml",
         projectOrSln: "./src/Conference.Android/Conference.Android.csproj",
         nugetRestore: "./src/Conference.sln",
-        description:  "Evolve 2016 Conference App")
+        description:  "Evolve 2016 Conference App"),
+    Project("SH", //NOTE: hitting max path, if I used a longer dir
+        csFile:       "./src/SmartHotel.Clients/SmartHotel.Clients.Android/MainActivity.cs",
+        arFile:       "./src/SmartHotel.Clients/SmartHotel.Clients.Android/Resources/values/styles.xml",
+        projectOrSln: "./src/SmartHotel.Clients/SmartHotel.Clients.Android/SmartHotel.Clients.Android.csproj",
+        nugetRestore: "./src/SmartHotel.Clients.Android.sln",
+        description:  "SmartHotel360, Connect 2017 demo app")
 };
 
 //Clone/update git submodules as needed
