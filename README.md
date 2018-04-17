@@ -39,7 +39,7 @@ See the latest [release](https://github.com/jonathanpeppers/XamarinAndroidBuildT
 | BlankApp       | 6.271s      | 1.618s       | 2.074s        | 1.769s              |
 | FormsBuildTime | 39.612s     | 3.685s       | 4.681s        | 12.126s             |
 | Evolve 2016    | 1m 0.335s   | 8.788s       | 11.248s       | 24.577s             |
-| SmartHotel360  | 1m 16.488s  | 27.123s      | 29.042s       | 58.950s             |
+| SmartHotel360  | 1m 17.553s  | 26.156s      | 25.387s       | 34.483s             |
 
 *NOTE: this was with VS 2017 15.6.4, Intel 2.8ghz Core i7*
 
