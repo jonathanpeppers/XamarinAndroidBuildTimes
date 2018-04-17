@@ -78,7 +78,7 @@ I forked the Evolve 2016 app, updated the NuGet, and reran the numbers.
 
 ## Xamarin.Android
 
-On the second build on Mac, for `Evolve2016`, `IncrementalClean` is also deleting pdb/mdb files (in addition to proguard):
+On the second build on Mac, for `Evolve2016`, `IncrementalClean` is also deleting pdb/mdb files:
 ```
 Deleting file "external/Evolve2016/src/Conference.Android/obj/Debug/linksrc/Conference.Droid.pdb".
 Deleting file "external/Evolve2016/src/Conference.Android/obj/Debug/linksrc/Conference.Clients.Portable.pdb".
